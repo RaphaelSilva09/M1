@@ -1,0 +1,29 @@
+// controle de notas; altere para testar diferentes cenários
+
+var nota1 = 10;
+var nota2 = 6;
+
+// verificando se o aluno passou
+
+var mediaParaPassar = 7;
+var notaRecuperacao = 4;
+var mediaAluno = (nota1 + nota2) / 2;
+
+var alunoPassou = mediaAluno >= mediaParaPassar;
+var alunoRecuperacao = mediaAluno >= notaRecuperacao && mediaAluno < mediaParaPassar;
+var alunoReprovou = mediaAluno < notaRecuperacao;
+
+//exibindo o resultado
+
+console.log('nota 1:', nota1);
+console.log('nota 2:', nota2);
+console.log('mediaAluno', mediaAluno)
+console.log('Média para passar:', mediaParaPassar);
+
+if(alunoPassou){
+    console.log('Aluno Passou!');
+} if(alunoReprovou) {
+    console.log('Aluno Reprovou!');
+} if(alunoRecuperacao){
+    console.log('Aluno em Recuperação!');
+}
